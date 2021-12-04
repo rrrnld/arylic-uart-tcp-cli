@@ -17,6 +17,19 @@ A small CLI tool to interact with Arylic devices via the UART TCP API.
 
 Will print the response when everything went well.
 
+## Build instructions
+
+This project uses [janet](janet-lang.org/). It is set up using [jpm](https://github.com/janet-lang/jpm) and you can find its configuration in [project.janet](./project.janet). The `.envrc` and `flake.nix` take care of dependencies if you have [direnv](https://direnv.net/) set up using [nix flakes](https://github.com/nix-community/nix-direnv) support.
+
+To build run:
+
+``` bash
+jpm deps
+jpm build
+```
+
+You will find a `arylic-uart` executable in the `build/` folder.
+
 ## UART API Docs
 
 - https://web.archive.org/web/20211204170758/https://developer.arylic.com/download/SA50_TCP_API.pdf
