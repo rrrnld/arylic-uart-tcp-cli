@@ -1,5 +1,5 @@
 {
-  description = "A flake describing the build and dev environment for arnes.space";
+  description = "A flake describing the build and dev environment";
   inputs.nixpkgs.url = github:NixOS/nixpkgs;
 
   outputs = { self, nixpkgs }: let
@@ -9,9 +9,6 @@
     devShell.${platform} = pkgs.mkShell {
       buildInputs = with pkgs; [
         janet
-        multimarkdown
-        entr
-        sassc
       ];
     };
   };
