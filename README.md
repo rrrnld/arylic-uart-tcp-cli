@@ -1,5 +1,7 @@
 # Arylic TCP UART Command-Line-Tool
 
+This is a very small (< 50 LOC) command line tool to interact with Arylic devices via their UART TCP API. It sends the command, and returns the response, nothing else.
+
 ```
 usage: arylic-uart [option] ... 
 
