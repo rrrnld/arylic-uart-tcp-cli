@@ -19,7 +19,7 @@ Will print the response when everything went well.
 
 ## Build instructions
 
-This project uses [janet](janet-lang.org/). It is set up using [jpm](https://github.com/janet-lang/jpm) and you can find its configuration in [project.janet](./project.janet). The `.envrc` and `flake.nix` take care of dependencies if you have [direnv](https://direnv.net/) set up using [nix flakes](https://github.com/nix-community/nix-direnv) support.
+This project uses [janet](janet-lang.org/). It is set up using [jpm](https://github.com/janet-lang/jpm) and you can find its configuration in [project.janet](./project.janet), the entry is in [main.janet](./main.janet). `.envrc` and `flake.nix` take care of dependencies if you have [direnv](https://direnv.net/) set up using [nix flakes](https://github.com/nix-community/nix-direnv) support.
 
 To build run:
 
