@@ -24,10 +24,10 @@
 
 (def options
   ["A small CLI tool to interact with Arylic devices via the UART TCP API."
-   "ip" {:kind :option
-         :help "IP of the Arylic device you want to send the command to"
-         :short "i"
-         :required true}
+   "device" {:kind :option
+             :help "IP or URL (without protocol) of the Arylic device you want to send the command to"
+             :short "d"
+             :required true}
    "cmd" {:kind :option
           :help "The command you want to send, e.g. MCU+PAS+RAKOIT:VER"
           :short "c"
@@ -37,7 +37,7 @@
   (let [parsed (argparse/argparse ;options)
         payload (encode-payload (parsed "cmd"))
         res @""]
-    (with [socket (net/connect (parsed "ip") "8899" :stream)]
+    (with [socket (net/connect (parsed "device") "8899" :stream)]
       # (printf "Connected to ip %s at socket %q!" (parsed "ip") socket)
       (:write socket payload 5)
       # (printf "Wrote payload %q" payload)

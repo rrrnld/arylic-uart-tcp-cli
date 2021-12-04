@@ -9,7 +9,7 @@ A small CLI tool to interact with Arylic devices via the UART TCP API.
 
  Required:
  -c, --cmd VALUE                             The command you want to send, e.g. MCU+PAS+RAKOIT:VER
- -i, --ip VALUE                              IP of the Arylic device you want to send the command to
+ -d, --device VALUE                          IP or URL (without protocol) of the Arylic device you want to send the command to
 
  Optional:
  -h, --help                                  Show this help message.
