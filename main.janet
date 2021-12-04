@@ -19,12 +19,7 @@
   # to decode a payload, simply call `string` :)
   # example taken from the first page of the pdf
   (string "\x18\x96\x18\x20\x0b\x00\x00\x00\xc1\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x4d\x43\x55\x2b\x56\x4f\x4c\x2b\x30\x35\x30") # "\x18\x96\x18 \v\0\0\0\xC1\x02\0\0\0\0\0\0\0\0\0\0MCU+VOL+050"
-  (encode-payload "MCU+VOL+050")                                                                                                         # @"\x18\x96\x18 \v\0\0\0\xC1\x02\0\0\0\0\0\0\0\0\0\0MCU+VOL+050"
-
-
-  (eq 
-    (encode-payload "MCU+VOL+050")
-    (buffer "\x18\x96\x18\x20\x0b\x00\x00\x00\xc1\x02\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x4d\x43\x55\x2b\x56\x4f\x4c\x2b\x30\x35\x30"))
+  (encode-payload "MCU+VOL+050")                                                                                                         # @"\x18\x96\x18 \v\0\0\0\xC1\x02\0\0\0\0\0\0\0\0\0\0MCU+VOL+050&"
   )
 
 (def options
