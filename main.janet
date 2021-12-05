@@ -34,12 +34,12 @@
           :required true}])
 
 (defn main [& args]
-  (let [parsed (argparse/argparse ;options)
-        payload (encode-payload (parsed "cmd"))
-        res @""]
-    (with [socket (net/connect (parsed "device") "8899" :stream)]
-      # (printf "Connected to ip %s at socket %q!" (parsed "ip") socket)
-      (:write socket payload 5)
-      # (printf "Wrote payload %q" payload)
-      (:read socket 1024 res 5)
-      (print (string/slice res 20 -2)))))
+  (when-let [parsed (argparse/argparse ;options)]
+    (let [payload (encode-payload (parsed "cmd"))
+          res @""]
+      (with [socket (net/connect (parsed "device") "8899" :stream)]
+        # (printf "Connected to ip %s at socket %q!" (parsed "ip") socket)
+        (:write socket payload 5)
+        # (printf "Wrote payload %q" payload)
+        (:read socket 1024 res 5)
+        (print (string/slice res 20 -2))))))
